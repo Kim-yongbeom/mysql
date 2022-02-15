@@ -16,7 +16,7 @@ WHEN 조건2 THEN 값2
 ELSE 값3
 END
 ```
-## inner join은 교집합, 기준 테이블과 조인 테이블 모두 데이터가 존재해야 조회된다.
+## inner join은 기준 테이블과 조인 테이블 모두 데이터가 존재해야 조회된다.
 ```
 SELECT T2.컬럼명
 FROM (
