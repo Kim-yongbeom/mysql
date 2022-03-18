@@ -69,19 +69,20 @@ ORDER BY KIND
 ;
 ```
 
-## 여기서 HAVING COUNT(*) > 1은 중복 체크하는것 이다.
-```
-SELECT 컬럼들
-FROM 테이블명
-WHERE 컬럼명 IS NOT NULL   
-GROUP BY 컬럼들
-HAVING COUNT(*) > 1
-;
-```
-
-### exists는 ()안에 서브쿼리만 올 수 있다.
+## exists는 ()안에 서브쿼리만 올 수 있다.
 - in은 ()안에 특정값이나, 서브쿼리가 올 수 있다.
 - exists가 성능은 더 좋다.
+```
+SELECT * 
+FROM 테이블명
+WHERE EXISTS 
+( 
+SELECT * 
+FROM 테이블명 
+WHERE 컬럼명 = 컬럼명
+)
+;
+```
 
 ## UNION
 - 두개의 select 결과를 합칠수 있다. 합친 결과에서 중복되는 행은 하나만 표시한다.
