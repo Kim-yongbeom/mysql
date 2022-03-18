@@ -23,6 +23,17 @@ WHEN 조건2 THEN 값2
 ELSE 값3
 END
 ```
+```
+# UPDATE CASE WHEN
+UPDATE recursive_test_table
+  SET parent_id = CASE 
+      WHEN parent_id = 1 THEN 10
+      WHEN parent_id = 2 THEN 20
+      WHEN parent_id = 3 THEN 30
+      WHEN parent_id = 6 THEN 60
+      ELSE parent_id
+      END;
+```
 ## OUTER JOIN
 - 기준 테이블에만 데이터가 존재하면 조회된다.
 - 조건에 부합하지 않는 행까지 포함시켜 결합한다.
