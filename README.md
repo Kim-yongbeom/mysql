@@ -1,3 +1,5 @@
+# MySQL 정리
+
 ## DISTINCT는 중복제거를 해준다.
 ```
 SELECT DISTINCT 컬럼명 
